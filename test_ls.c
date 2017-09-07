@@ -6,7 +6,7 @@
 /*   By: arangari <arangari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/07 08:53:01 by arangari          #+#    #+#             */
-/*   Updated: 2017/09/07 11:20:21 by arangari         ###   ########.fr       */
+/*   Updated: 2017/09/07 11:22:00 by arangari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main(int ac, char **av)
     {
         while (n--)
         {
-            printf("%s    ", namelist[n]->d_name);
+            printf("%s\t", namelist[n]->d_name);
             free(namelist[n]);
         }
         free(namelist);
