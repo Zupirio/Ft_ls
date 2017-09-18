@@ -3,33 +3,35 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: arangari <arangari@student.42.fr>          +#+  +:+       +#+         #
+#    By: fthwala <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/09/12 09:09:20 by arangari          #+#    #+#              #
-#    Updated: 2017/09/12 09:15:14 by arangari         ###   ########.fr        #
+#    Created: 2017/06/02 17:14:07 by fthwala           #+#    #+#              #
+#    Updated: 2017/09/09 11:41:15 by fthwala          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft_ls
+NAME = libft.a
 
-SRC = main.c ft_ls.c list.c ft_do_file_check.Created
+CFLAGS = -Wall -Wextra -Werror -I includes
 
-FLAGS = gcc -Wall -Wextra -Werror -o
+SRC = ft_strlen.c ft_strcmp.c \
+	  ft_memcpy.c ft_int_len.c ft_strnew.c \
+	  ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c \
+	  ft_strjoin.c ft_itoa.c \
+ 
+OBJ = $(SRC:.c=.o)
 
-all : $(NAME)
+all: $(NAME)
 
 $(NAME):
-		@echo "Compiling $(NAME)..."
-		@make -C libft/
-		@$(FLAGS) $(NAME)
-		$(SRC) -L libft/ -lft -I libft/includes -I includes
+	@gcc $(CFLAGS) -c $(SRC)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
-fclean:
-	@echo "Cleaning..."
-	@make fclean -C libft/
-	@rm - f$(NAME)
+clean:
+	@rm -f $(OBJ)
 
-re : fclean all
+fclean: clean
+	@rm -f $(NAME)
 
-norm:
-	@norminette $(SRC) includes/ft_ls.h
+re: fclean all
