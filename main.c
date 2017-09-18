@@ -6,7 +6,7 @@
 /*   By: arangari <arangari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 15:12:15 by arangari          #+#    #+#             */
-/*   Updated: 2017/09/18 18:03:39 by arangari         ###   ########.fr       */
+/*   Updated: 2017/09/18 18:26:33 by arangari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int			compare_strings(t_dir d1, t_dir d2)
 	return (ft_strcmp(d1.dir, d2.dir));
 }
 
-int		compare_time(t_dir d1, t_dir d2)
+int			compare_time(t_dir d1, t_dir d2)
 {
 	if (d1.time < d2.time)
 		return (1);
