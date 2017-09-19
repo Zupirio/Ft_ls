@@ -6,13 +6,13 @@
 #    By: arangari <arangari@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/12 09:09:20 by arangari          #+#    #+#              #
-#    Updated: 2017/09/12 09:15:14 by arangari         ###   ########.fr        #
+#    Updated: 2017/09/19 11:17:31 by arangari         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ft_ls
 
-SRC = main.c ft_ls.c list.c ft_do_file_check.Created
+SRC = main.c ft_ls.c list.c ft_do_file_check.c
 
 FLAGS = gcc -Wall -Wextra -Werror -o
 
