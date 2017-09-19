@@ -6,14 +6,14 @@
 /*   By: arangari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/16 11:49:20 by arangari          #+#    #+#             */
-/*   Updated: 2017/09/19 12:07:57 by arangari         ###   ########.fr       */
+/*   Updated: 2017/09/19 12:14:40 by arangari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LS_H
 # define FT_LS_H
 
-# include "libft/includes/libft.h"
+# include "../libft/includes/libft.h"
 # include <dirent.h>
 # include <sys/types.h>
 # include <sys/dir.h>
