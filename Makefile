@@ -6,7 +6,7 @@
 #    By: arangari <arangari@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/12 09:09:20 by arangari          #+#    #+#              #
-#    Updated: 2017/09/19 11:17:31 by arangari         ###   ########.fr        #
+#    Updated: 2017/09/19 11:59:21 by arangari         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,13 +21,12 @@ all : $(NAME)
 $(NAME):
 		@echo "Compiling $(NAME)..."
 		@make -C libft/
-		@$(FLAGS) $(NAME)
-		$(SRC) -L libft/ -lft -I libft/includes -I includes
+		@$(FLAGS) $(NAME) $(SRC) -L libft/ -lft -I libft/includes -I includes
 
 fclean:
 	@echo "Cleaning..."
 	@make fclean -C libft/
-	@rm - f$(NAME)
+	@rm -f $(NAME)
 
 re : fclean all
 
