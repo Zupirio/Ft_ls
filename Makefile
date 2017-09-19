@@ -6,7 +6,7 @@
 #    By: arangari <arangari@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/12 09:09:20 by arangari          #+#    #+#              #
-#    Updated: 2017/09/19 11:59:21 by arangari         ###   ########.fr        #
+#    Updated: 2017/09/19 16:39:54 by arangari         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ $(NAME):
 		@echo "Compiling $(NAME)..."
 		@make -C libft/
 		@$(FLAGS) $(NAME) $(SRC) -L libft/ -lft -I libft/includes -I includes
+clean:
+	@rm -rf $(NAME)
 
 fclean:
 	@echo "Cleaning..."

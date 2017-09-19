@@ -6,7 +6,7 @@
 /*   By: arangari <arangari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/18 15:12:15 by arangari          #+#    #+#             */
-/*   Updated: 2017/09/18 18:26:33 by arangari         ###   ########.fr       */
+/*   Updated: 2017/09/19 17:00:56 by arangari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ int			add_args(t_env *e, char *arg)
 	{
 		if (arg[x] == 'l')
 			e->l = 1;
-		if (arg[x] == 'a')
+		else if (arg[x] == 'a')
 			e->a = 1;
-		if (arg[x] == 'r')
+		else if (arg[x] == 'r')
 			e->r = 1;
-		if (arg[x] == 't')
+		else if (arg[x] == 't')
 			e->t = 1;
-		if (arg[x] == 'R')
+		else if (arg[x] == 'R')
 			e->rr = 1;
 		else
 		{
